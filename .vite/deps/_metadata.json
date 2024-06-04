@@ -1,8 +1,43 @@
 {
-  "hash": "e568e4f1",
+  "hash": "ab9a6c7c",
   "configHash": "bb27d29f",
-  "lockfileHash": "e3b0c442",
-  "browserHash": "42b0bc41",
-  "optimized": {},
-  "chunks": {}
+  "lockfileHash": "04ba7a44",
+  "browserHash": "44dc3a1e",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "70b0ffc8",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "4b5a53f1",
+      "needsInterop": true
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "9864c434",
+      "needsInterop": false
+    },
+    "react-intersection-observer": {
+      "src": "../../node_modules/react-intersection-observer/index.mjs",
+      "file": "react-intersection-observer.js",
+      "fileHash": "0a2c00e2",
+      "needsInterop": false
+    },
+    "react-hot-toast": {
+      "src": "../../node_modules/react-hot-toast/dist/index.mjs",
+      "file": "react-hot-toast.js",
+      "fileHash": "a9719ce4",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-ATZAHYIB": {
+      "file": "chunk-ATZAHYIB.js"
+    }
+  }
 }

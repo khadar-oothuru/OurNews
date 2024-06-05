@@ -5,9 +5,9 @@ const QuesCards = () => {
   return (
     <div className={classes.whole_cont}>
       <div className={classes.top_cont}>
-        <h3> Our news </h3>
+        <h3 className="text-3xl font-semibold"> Our news </h3>
         <h1>
-          Our Latest News <br /> That Can Help You
+        Our Latest News <br /> That Can Help You
         </h1>
 
         <p>

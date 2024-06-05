@@ -15,7 +15,13 @@ const Cards = () => {
       try {
         const apiKey = "8fbff4d924f245c38e8cd16eaf6a2264";
         const response = await fetch(
-          `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}&category=business`
+          `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}&category=business`,
+          {
+            headers: {
+              'Upgrade': 'HTTP/2.0, HTTPS/1.1',
+              'Accept': 'application/json'
+            }
+          }
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

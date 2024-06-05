@@ -18,7 +18,6 @@ const Cards = () => {
           `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}&category=business`,
           {
             headers: {
-              'Upgrade': 'HTTP/2.0, HTTPS/1.1',
               'Accept': 'application/json'
             }
           }

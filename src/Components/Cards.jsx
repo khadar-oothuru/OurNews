@@ -29,7 +29,7 @@ const Cards = () => {
         if (data.articles) {
           setNewsData(data.articles);
         } else {
-          throw new Error("No articles found in response");
+          throw new Error("No news  found in response");
         }
       } catch (error) {
         toast.error("Error fetching news data");

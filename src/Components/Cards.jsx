@@ -52,9 +52,9 @@ const Cards = () => {
       ) : (
         <>
           {" "}
-          <p className="text-6xl text-red-600 text-center ml-5">
+          {/* <p className="text-6xl text-red-600 text-center ml-5">
             No news data available.
-          </p>
+          </p> */}
           <div role="alert" className="alert alert-error">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ const Cards = () => {
                 d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <span>Internal server Error!</span>
+            <span> No news data available.</span>
           </div>
         </>
       )}

@@ -50,8 +50,8 @@ const Cards = () => {
       ) : newsData.length > 0 ? (
         newsData.map((data, index) => <Card key={index} {...data} />)
       ) : (
-        <p className="text-6xl text-red-600 text-center  ml-[150px]">
-          No news data available.
+        <p className="text-6xl text-red-600 text-center  ml-[250px]">
+          No news data available!
         </p>
       )}
     </div>

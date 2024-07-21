@@ -16,7 +16,7 @@ const Cards = () => {
       try {
         const apiKey = "8fbff4d924f245c38e8cd16eaf6a2264";
         const response = await fetch(
-          `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}&category=business`,
+          `https://newsapi.org/v2/everything?q=farmers+milk&language=en&apiKey=${apiKey}`,
           {
             headers: {
               Accept: "application/json",
@@ -71,23 +71,35 @@ const Card = ({ urlToImage, url, title, description }) => {
     triggerOnce: true,
   });
 
+  // Default image URL if no image is available
+  const defaultImage = "https://via.placeholder.com/420x240?text=No+Image";
+
+  // Slice description to a maximum of 100 characters
+  const shortDescription = description
+    ? description.length > 100
+      ? `${description.substring(0, 100)}...`
+      : description
+    : "";
+
   return (
-    urlToImage && (
-      <motion.div
-        ref={ref}
-        initial={{ x: 100, opacity: 0 }}
-        animate={inView ? { x: 0, opacity: 1 } : "hidden"}
-        transition={{ ease: "easeInOut", duration: 0.9, delay: 0.0 }}
-        className={classes.card_cont}
-      >
-        <img src={urlToImage} alt={title} />
-        <h1 className={classes.que}>{title}</h1>
-        <p className={classes.ans}>{description}</p>
-        <button className={classes.btn_learn} onClick={openUrlInNewTab}>
-          Learn More
-        </button>
-      </motion.div>
-    )
+    <motion.div
+      ref={ref}
+      initial={{ x: 100, opacity: 0 }}
+      animate={inView ? { x: 0, opacity: 1 } : "hidden"}
+      transition={{ ease: "easeInOut", duration: 0.9, delay: 0.0 }}
+      className={classes.card_cont}
+    >
+      <img
+        src={urlToImage || defaultImage}
+        alt={title}
+        className={classes.card_img}
+      />
+      <h1 className={classes.que}>{title}</h1>
+      <p className={classes.ans}>{shortDescription}</p>
+      <button className={classes.btn_learn} onClick={openUrlInNewTab}>
+        Learn More
+      </button>
+    </motion.div>
   );
 };
 
